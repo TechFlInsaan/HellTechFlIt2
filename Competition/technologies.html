@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Technologies | Future of Education</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="robotic-hand.png" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <div id="what">
+      <div class="nav">
+        <a href="./index.html"` class="wutishpnig">Home</a>
+        <a href="./vision2025.html"` class="wutishpnig">Vision 2025</a>
+        <a href="./technologies.html"` class="wutishpnig">Technologies</a>
+        <a href="./skillsofthefuture.html"` class="wutishpnig">Skills of The Future</a>
+        <a href="./opportunitiesandchallenges.html"` class="wutishpnig">Opportunities And Challenges</a>
+        <a href="./interactivezone.html"` class="wutishpnig">Interactive Zone</a>
+        <a href="./contactus.html"` class="wutishpnig">Contact Us</a>
+      </div>
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="Screenshot 2025-07-12 230310.png" style="width:100%" class="wtfh">
+        </div>
+        <div class="mySlides fade">
+          <img src="Screenshot 2025-07-12 233503.png" style="width:100%" class="wtfh">
+        </div>
+        <div class="mySlides fade">
+          <img src="Screenshot 2025-07-12 233719.png" style="width:100%" class="wtfh">
+        </div>
+      </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+      </div>
+
+      <h1 id="centered">
+        Technology That Transforms Learning
+      </h1>
+      <p id="intro">
+        Let’s look at the powerful tools that will redefine how we learn, teach, and connect in the classrooms of the future.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <div id="section1">
+      <h2>
+        AI Tutors
+      </h2>
+      <p>
+        Artificial Intelligence tutors will become a central part of every student’s learning journey. These smart systems can track each learner’s progress, identify strengths and weaknesses, and provide instant feedback. For example, if a student struggles with a math concept, the AI tutor will offer simpler explanations, extra practice, or short videos to build understanding. Unlike traditional learning materials, AI tutors will learn and grow with the student, adapting lessons to personal goals and preferences. Over time, they will become trusted companions, helping learners stay motivated and engaged.
+      </p>
+    </div>
+    <div id="section2">
+      <h2>
+        Virtual and Augmented Reality
+      </h2>
+      <p>
+        Virtual Reality (VR) will transport students into fully immersive worlds where they can explore historical events, conduct complex science experiments, or practice real-life skills safely. Augmented Reality (AR) will overlay digital information onto physical spaces—for example, showing 3D models of the solar system in the middle of a classroom or displaying labels and instructions during a lab experiment. Together, VR and AR will make education more interactive, exciting, and memorable. These tools will also allow students from different countries to learn and collaborate together in shared virtual spaces.
+      </p>
+    </div>
+    <div id="section3">
+      <h2>
+        Brain Interfaces
+      </h2>
+      <p>
+        In the future, neurotechnology and brain-computer interfaces may play a major role in education. These devices could measure attention levels, detect when a student is confused or stressed, and suggest breaks or alternative approaches instantly. Advanced systems might even allow direct transmission of information to the brain to speed up learning, although this technology will raise important questions about ethics, safety, and privacy. While still in early development, brain interfaces could eventually help people with disabilities communicate, learn, and participate in ways never before possible.
+      </p>
+    </div>
+  </main>
+
+  <footer id="hey">
+    <p>Contact Us:-</p>
+    <p>Contact - 2764972622</p>
+    <p>...............2652673652</p>
+    <p>Email - example@yesanexpl.gg</p>
+  </footer>
+
+  <script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1;}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+  </script>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const footerParagraphs = document.querySelectorAll('footer#hey p');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // Assign a different animation class per line
+        switch(index % 4) {
+          case 0:
+            entry.target.classList.add('footer-animate-left');
+            break;
+          case 1:
+            entry.target.classList.add('footer-animate-right');
+            break;
+          case 2:
+            entry.target.classList.add('footer-animate-top');
+            break;
+          case 3:
+            entry.target.classList.add('footer-animate-bottom');
+            break;
+        }
+        observer.unobserve(entry.target); // Animate only once
+      }
+    });
+  }, { threshold: 0.3 }); // Trigger when 30% is visible
+
+  footerParagraphs.forEach(p => observer.observe(p));
+});
+</script>
+</body>
+</html>

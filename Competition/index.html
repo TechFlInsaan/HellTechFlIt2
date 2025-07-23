@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home | Future of Education</title>
+    <link rel="icon" href="house.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <div id="what">
+        <div class="nav">
+        <a href="./index.html" class="wutishpnig">Home</a>
+        <a href="./vision2025.html" class="wutishpnig">Vision 2025</a>
+        <a href="./technologies.html" class="wutishpnig">Technologies</a>
+        <a href="./skillsofthefuture.html" class="wutishpnig">Skills of The Future</a>
+        <a href="./opportunitiesandchallenges.html" class="wutishpnig">Opportunities And Challenges</a>
+        <a href="./interactivezone.html" class="wutishpnig">Interactive Zone</a>
+        <a href="./contactus.html" class="wutishpnig">Contact Us</a>
+    </div>
+        <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.png" style="width:100%" class="wtfh">
+</div>
+
+<div class="mySlides fade">
+  <img src="rom ron ron ram ram ram de de de gut gut gut.png" style="width:100%" class="wtfh">
+</div>
+
+<div class="mySlides fade">
+  <img src="ding dang dung ding dung dung daandi daandi rambara.png" style="width:100%" class="wtfh">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+    <h1 id="centered">
+        Welcome To The Future Of Education
+    </h1>
+    <p id="intro">
+        Explore how learning is evolving toward 2050 and beyond.
+    </p>
+    </div>
+    </header>
+    <main>
+        <div id="section1">
+        <h2>
+            Why It Matters?
+        </h2>
+        <br>
+        <p class="nella">Education's future is crucial—it decides how we adapt to a fast-changing world. With AI reshaping jobs, learning must focus on skills like creativity and problem-solving, not just facts. Equal access to flexible, lifelong education can reduce inequality and fuel progress. If we fail to evolve, many will be left behind. Better learning means a brighter future for all.   Lets see how it transform:-</p>
+        </div>
+        <div id="section2">
+            <h2>
+                The Transformation
+            </h2>
+            <p class="nella">The future of education is breaking free from traditional classrooms, transforming into a dynamic, tech-driven ecosystem where learning is personalized, immersive, and lifelong. Artificial intelligence tailors lessons to individual students through adaptive platforms and AI tutors like ChatGPT, while VR and AR bring history, science, and engineering to life with interactive simulations. The rise of micro-credentials and online platforms like Coursera makes education more flexible, allowing learners to acquire skills on-demand rather than follow rigid degree paths. Classrooms are evolving into hybrid spaces where project-based and experiential learning take center stage, preparing students for real-world challenges. Meanwhile, emotional intelligence and creativity are becoming just as crucial as technical skills in an AI-dominated workforce. Yet, as data and IoT optimize learning, ethical concerns—like AI bias and the digital divide—pose challenges. The ultimate goal? A democratized, learner-centered future where education is accessible, engaging, and never truly stops.</p>
+        </div>
+    </main>
+    <footer id="hey">
+        <p>Contact Us:-</p>
+        <p>Contact - 2764972622</p>
+        <p>...............2652673652</p>
+        <p>Email - example@yesanexpl.gg</p>
+    </footer>
+    <script>
+alert("Welcome to the FUTURE OF EDUCATION")
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const footerParagraphs = document.querySelectorAll('footer#hey p');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // Assign a different animation class per line
+        switch(index % 4) {
+          case 0:
+            entry.target.classList.add('footer-animate-left');
+            break;
+          case 1:
+            entry.target.classList.add('footer-animate-right');
+            break;
+          case 2:
+            entry.target.classList.add('footer-animate-top');
+            break;
+          case 3:
+            entry.target.classList.add('footer-animate-bottom');
+            break;
+        }
+        observer.unobserve(entry.target); // Animate only once
+      }
+    });
+  }, { threshold: 0.3 }); // Trigger when 30% is visible
+
+  footerParagraphs.forEach(p => observer.observe(p));
+});
+</script>
+</body>
+</html>

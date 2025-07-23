@@ -1,0 +1,316 @@
+body {
+  background-color: #f9fafb;
+  padding-top: 80px;
+}
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container styling */
+.slideshow-container {
+  max-width: 90%;
+  margin: 50px auto;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden; /* Rounded corners for all slides */
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+  background: #F9FAFB; /* Soft White background for loading time */
+}
+
+/* Slide images */
+.wtfh {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Caption text (if you want to add captions later) */
+.text {
+  color: #FFFFFF;
+  font-size: 18px;
+  padding: 12px 16px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(30, 58, 138, 0.5); /* Semi-transparent Deep Blue overlay */
+}
+
+/* Dots container spacing */
+.dot {
+  height: 14px;
+  width: 14px;
+  margin: 0 6px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Active dot styling */
+.active {
+  background-color: #1E3A8A; /* Deep Blue */
+  transform: scale(1.2); /* Slightly larger */
+}
+
+/* Dot hover effect */
+.dot:hover {
+  background-color: #60A5FA; /* Sky Blue */
+}
+
+/* Fading animation remains unchanged */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/* Fading keyframes */
+@keyframes fade {
+  from {opacity: 0.4} 
+  to {opacity: 1}
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 600px) {
+  .wtfh {
+    height: 200px;
+  }
+  .text {
+    font-size: 14px;
+  }
+  .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+  }
+}
+
+#centered {
+  position: absolute;
+  top: 30%;
+  left: 150%; /* Start off-screen to the right */
+  transform: translate(-50%, -50%);
+  color: #1E3A8A;
+  font-family: 'Poppins', sans-serif;
+  font-size: 33px;
+  animation: slideIn 1.5s ease-out forwards; /* Animation properties */
+}
+
+@keyframes slideIn {
+  from {
+    left: 150%; /* Starting position (off-screen right) */
+  }
+  to {
+    left: 50%; /* Final position (centered) */
+  }
+}
+
+#intro {
+  position: absolute;
+  top: 43%;
+  left: -50%; /* Start off-screen to the left */
+  transform: translate(-50%, -50%);
+  color: #111827;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  animation: slideInFromLeft 1.2s ease-out forwards;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    left: -50%; /* Starting position (off-screen left) */
+  }
+  to {
+    left: 50%; /* Final position (centered) */
+  }
+}
+
+
+/* The container around all nav links */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  background-color: #1E3A8A;
+  padding: 20px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  border-bottom: 4px solid #60A5FA;
+  display: flex;
+  justify-content: center; /* Center the links */
+  align-items: center;
+  gap: 40px; /* Space between links */
+  background-color: #1E3A8A; /* Deep Blue background */
+  padding: 20px 0; /* Vertical padding */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-bottom: 4px solid #60A5FA; /* Sky Blue underline for style */
+}
+
+/* All nav links */
+.nav .wutishpnig {
+  font-family: 'Poppins', sans-serif;
+  color: #FFFFFF; /* White text */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect with underline animation */
+.nav .wutishpnig::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background-color: #D1FAE5; /* Mint Green underline on hover */
+  transition: width 0.3s ease;
+}
+
+/* Hover state: text color and underline grow */
+.nav .wutishpnig:hover {
+  color: #D1FAE5; /* Mint Green text on hover */
+}
+
+.nav .wutishpnig:hover::after {
+  width: 100%;
+}
+
+/* Optional: active link style */
+.nav .wutishpnig.active {
+  color: #FEE440; /* Bright Yellow for the active page */
+}
+
+/* Main content container spacing */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding-top: 0, 40px;
+}
+
+/* Section boxes */
+#section1,
+#section2,
+#section3 {
+  background: #F9FAFB; /* Soft off-white background */
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on sections */
+#section1:hover,
+#section2:hover,
+#section3:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Section headings */
+#section1 h2,
+#section2 h2,
+#section3 h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #1E3A8A;
+  font-size: 24px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Paragraph styling */
+.nella {
+  font-family: 'Open Sans', sans-serif;
+  color: #111827;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Footer styling */
+footer#hey {
+  background: #1E3A8A;
+  color: #FFFFFF;
+  padding: 30px 20px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  border-top: 4px solid #60A5FA;
+}
+
+/* Footer paragraphs */
+footer#hey p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+@keyframes centered {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 20%; /* Stops at 20% from left - adjust this value */
+  }
+}
+
+footer#hey {
+  background: #1E3A8A;
+  color: #FFFFFF;
+  padding: 30px 20px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  border-top: 4px solid #60A5FA;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Footer paragraphs */
+footer#hey p {
+  margin: 8px 0;
+  font-size: 15px;
+  opacity: 0;           /* Hidden by default */
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+  font-weight: bold;
+}
+
+/* Keyframes for different directions */
+@keyframes slideFromLeft {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideFromRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideFromTop {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes slideFromBottom {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Animation classes */
+.footer-animate-left {
+  animation: slideFromLeft 1s forwards;
+}
+.footer-animate-right {
+  animation: slideFromRight 1s forwards;
+}
+.footer-animate-top {
+  animation: slideFromTop 1s forwards;
+}
+.footer-animate-bottom {
+  animation: slideFromBottom 1s forwards;
+}

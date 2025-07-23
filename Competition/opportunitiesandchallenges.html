@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opportunities and Challenges | Future of Education</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="motivation.png" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div id="what">
+      <div class="nav">
+        <a href="index.html" class="wutishpnig">Home</a>
+        <a href="vision2025.html" class="wutishpnig">Vision 2025</a>
+        <a href="technologies.html" class="wutishpnig">Technologies</a>
+        <a href="skillsofthefuture.html" class="wutishpnig">Skills of The Future</a>
+        <a href="opportunitiesandchallenges.html" class="wutishpnig">Opportunities And Challenges</a>
+        <a href="interactivezone.html" class="wutishpnig">Interactive Zone</a>
+        <a href="contactus.html" class="wutishpnig">Contact Us</a>
+      </div>
+
+      <!-- Slideshow -->
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+  <img src="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.png" style="width:100%" class="wtfh">
+</div>
+
+<div class="mySlides fade">
+  <img src="rom ron ron ram ram ram de de de gut gut gut.png" style="width:100%" class="wtfh">
+</div>
+
+<div class="mySlides fade">
+  <img src="ding dang dung ding dung dung daandi daandi rambara.png" style="width:100%" class="wtfh">
+</div>
+      <br />
+      <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <!-- End Slideshow -->
+
+      <h1 id="centered">
+        What Are the Roadblocks?
+      </h1>
+      <p id="intro">
+        Every transformation brings benefits—and important questions. As we shape the education of the future, we must also face the challenges it creates to make sure learning is fair, safe, and healthy for everyone.
+      </p>
+    </div>
+  </header>
+  <main>
+    <div id="section1">
+      <h2>
+        Access for All
+      </h2>
+      <p>
+        New technologies can make learning richer and more personalized, but not everyone has equal access to devices, high-speed internet, or modern classrooms. In many parts of the world, students still struggle with basic resources like textbooks and electricity. Bridging this “digital divide” will be one of the biggest priorities. Governments, communities, and private companies will need to work together to provide affordable tools, training, and support so that no learner is left behind.
+      </p>
+    </div>
+    <div id="section2">
+      <h2>
+        Data and Privacy
+      </h2>
+      <p>
+        AI tutors and digital platforms will collect huge amounts of information about how students think, study, and progress. While this data can help personalize education, it can also be misused or stolen if not protected carefully. Questions will arise about who owns this data, how long it is stored, and who has the right to see it. Schools and technology providers will need strong policies to keep student information private and secure, and families will need to understand their rights.
+      </p>
+    </div>
+    <div id="section3">
+      <h2>
+        Mental Health
+      </h2>
+      <p>
+        More screen time and constant monitoring can sometimes create stress, anxiety, and burnout. As learning becomes more digital, students may feel pressure to be constantly connected and to perform at their best all the time. To protect mental health, future schools will need to teach healthy habits, encourage balance, and create spaces where students can unplug and connect face-to-face. Supporting emotional well-being will be just as important as teaching academics.
+      </p>
+    </div>
+  </main>
+  <footer id="hey">
+    <p>Contact Us:-</p>
+    <p>Contact - 2764972622</p>
+    <p>...............2652673652</p>
+    <p>Email - example@yesanexpl.gg</p>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+  </script>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const footerParagraphs = document.querySelectorAll('footer#hey p');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // Assign a different animation class per line
+        switch(index % 4) {
+          case 0:
+            entry.target.classList.add('footer-animate-left');
+            break;
+          case 1:
+            entry.target.classList.add('footer-animate-right');
+            break;
+          case 2:
+            entry.target.classList.add('footer-animate-top');
+            break;
+          case 3:
+            entry.target.classList.add('footer-animate-bottom');
+            break;
+        }
+        observer.unobserve(entry.target); // Animate only once
+      }
+    });
+  }, { threshold: 0.3 }); // Trigger when 30% is visible
+
+  footerParagraphs.forEach(p => observer.observe(p));
+});
+</script>
+</body>
+</html>

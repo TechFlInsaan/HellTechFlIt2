@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills of the Future | Future of Education</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="competence.png" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div id="what">
+      <div class="nav">
+        <a href="index.html" class="wutishpnig">Home</a>
+        <a href="vision2025.html" class="wutishpnig">Vision 2025</a>
+        <a href="technologies.html" class="wutishpnig">Technologies</a>
+        <a href="skillsofthefuture.html" class="wutishpnig">Skills of The Future</a>
+        <a href="opportunitiesandchallenges.html" class="wutishpnig">Opportunities And Challenges</a>
+        <a href="interactivezone.html" class="wutishpnig">Interactive Zone</a>
+        <a href="contactus.html" class="wutishpnig">Contact Us</a>
+      </div>
+
+      <!-- Slideshow -->
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="Screenshot 2025-07-12 230310.png" style="width:100%" class="wtfh" />
+        </div>
+        <div class="mySlides fade">
+          <img src="Screenshot 2025-07-12 233503.png" style="width:100%" class="wtfh" />
+        </div>
+        <div class="mySlides fade">
+          <img src="Screenshot 2025-07-12 233719.png" style="width:100%" class="wtfh" />
+        </div>
+      </div>
+      <br />
+      <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <!-- End Slideshow -->
+
+      <h1 id="centered">
+        The New Essential Skills
+      </h1>
+      <p id="intro">
+        In tomorrow’s world, simply memorizing facts won’t be enough. To succeed in life and work, students will need to master a set of core skills that blend creativity, critical thinking, and emotional awareness.
+      </p>
+    </div>
+  </header>
+  <main>
+    <div id="section1">
+      <h2>
+        Critical Thinking
+      </h2>
+      <p>
+        Critical thinking means the ability to analyze information, question assumptions, and solve problems logically. In the future, with so much data available at our fingertips, it will be more important than ever to know how to judge what is true, what is useful, and what is misleading. Students will practice investigating real-world issues, comparing different perspectives, and developing evidence-based solutions. This skill will prepare them to tackle complex challenges in fields like science, business, and public policy.
+      </p>
+    </div>
+    <div id="section2">
+      <h2>
+        Creativity
+      </h2>
+      <p>
+        Automation and AI will take over many routine tasks, but creative thinking is something machines can’t easily replace. Future workers will need to imagine new ideas, invent products, and find fresh ways to improve society. Schools will encourage creativity through project-based learning, design challenges, and cross-disciplinary projects that combine art, technology, and storytelling. By developing their creative abilities early, students will be ready to innovate in any career they choose.
+      </p>
+    </div>
+    <div id="section3">
+      <h2>
+        Emotional Intelligence
+      </h2>
+      <p>
+        Emotional intelligence is the ability to understand and manage your own emotions as well as connect with others in positive ways. As teams become more global and diverse, this skill will be vital for collaboration, leadership, and healthy relationships. Students will learn to communicate clearly, show empathy, resolve conflicts, and support one another. High emotional intelligence will also help them handle stress, adapt to change, and maintain well-being in a fast-paced, technology-driven world.
+      </p>
+    </div>
+  </main>
+  <footer id="hey">
+    <p>Contact Us:-</p>
+    <p>Contact - 2764972622</p>
+    <p>...............2652673652</p>
+    <p>Email - example@yesanexpl.gg</p>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+  </script>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const footerParagraphs = document.querySelectorAll('footer#hey p');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // Assign a different animation class per line
+        switch(index % 4) {
+          case 0:
+            entry.target.classList.add('footer-animate-left');
+            break;
+          case 1:
+            entry.target.classList.add('footer-animate-right');
+            break;
+          case 2:
+            entry.target.classList.add('footer-animate-top');
+            break;
+          case 3:
+            entry.target.classList.add('footer-animate-bottom');
+            break;
+        }
+        observer.unobserve(entry.target); // Animate only once
+      }
+    });
+  }, { threshold: 0.3 }); // Trigger when 30% is visible
+
+  footerParagraphs.forEach(p => observer.observe(p));
+});
+</script>
+</body>
+</html>

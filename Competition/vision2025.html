@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vision 2050 | Future of Education</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="vision.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <div id="what">
+      <div class="nav">
+        <a href="./index.html" class="wutishpnig">Home</a>
+        <a href="./vision2025.html" class="wutishpnig">Vision 2025</a>
+        <a href="./technologies.html" class="wutishpnig">Technologies</a>
+        <a href="./skillsofthefuture.html" class="wutishpnig">Skills of The Future</a>
+        <a href="./opportunitiesandchallenges.html" class="wutishpnig">Opportunities And Challenges</a>
+        <a href="./interactivezone.html" class="wutishpnig">Interactive Zone</a>
+        <a href="./contactus.html" class="wutishpnig">Contact Us</a>
+      </div>
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="Screenshot 2025-07-12 230310.png" style="width:100%" class="wtfh" />
+        </div>
+        <div class="mySlides fade">
+          <img src="Screenshot 2025-07-12 233503.png" style="width:100%" class="wtfh" />
+        </div>
+        <div class="mySlides fade">
+          <img src="Screenshot 2025-07-12 233719.png" style="width:100%" class="wtfh" />
+        </div>
+      </div>
+      <br />
+      <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <h1 id="centered">
+        Vision of 2050
+      </h1>
+      <p id="intro">
+        See how would be the the Education system and environment in 2050 and beyond
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <div id="section1">
+      <h2>
+        Personalized Learning
+      </h2>
+      <p>
+        AI tutors and intelligent learning platforms will adjust lessons in real time, helping each student move at the pace that suits them best. Instead of one-size-fits-all classrooms, learners will have their own customized pathways, with content recommendations based on their strengths, interests, and goals. Progress will be monitored seamlessly, making learning more effective and motivating. Teachers will act as mentors and guides, supporting emotional and creative development while technology handles the routine assessments and adaptations.
+      </p>
+    </div>
+    <div id="section2">
+      <h2>
+        Immersive Classrooms
+      </h2>
+      <p>
+        Imagine stepping into a virtual lab to conduct science experiments or traveling back in time to witness ancient civilizations—all without leaving your home or school. Virtual Reality (VR) and Augmented Reality (AR) will create fully interactive lessons where students can explore, build, and collaborate in 3D environments. These immersive experiences will not only make learning more exciting but also help students understand complex concepts through direct simulation and hands-on practice. Traditional classrooms will evolve into hybrid spaces combining physical and digital learning tools.
+      </p>
+    </div>
+    <div id="section3">
+      <h2>
+        Lifelong Learning
+      </h2>
+      <p>
+        By 2050, learning won’t end when you graduate from school or university. As technology and industries keep changing, people of all ages will need to keep updating their skills throughout their lives. Flexible online platforms, subscription-based courses, and micro-credentials will become the norm. Whether you’re 15 or 55, you’ll be able to access high-quality education anytime, anywhere, to reskill or pursue new interests. Lifelong learning will become a natural part of work and daily life, empowering everyone to adapt and thrive in a rapidly changing world.
+      </p>
+    </div>
+  </main>
+
+  <footer id="hey">
+    <p>Contact Us:-</p>
+    <p>Contact - 2764972622</p>
+    <p>...............2652673652</p>
+    <p>Email - example@yesanexpl.gg</p>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+  </script>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const footerParagraphs = document.querySelectorAll('footer#hey p');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // Assign a different animation class per line
+        switch(index % 4) {
+          case 0:
+            entry.target.classList.add('footer-animate-left');
+            break;
+          case 1:
+            entry.target.classList.add('footer-animate-right');
+            break;
+          case 2:
+            entry.target.classList.add('footer-animate-top');
+            break;
+          case 3:
+            entry.target.classList.add('footer-animate-bottom');
+            break;
+        }
+        observer.unobserve(entry.target); // Animate only once
+      }
+    });
+  }, { threshold: 0.3 }); // Trigger when 30% is visible
+
+  footerParagraphs.forEach(p => observer.observe(p));
+});
+</script>
+</body>
+</html>
